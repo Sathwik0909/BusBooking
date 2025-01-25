@@ -1,27 +1,19 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/navbar/NAvbar";
-import Home from "./pages/Home";
+import Navbar from "./components/navbar/Navbar";
+import About from "./pages/About";
+import Home from "./pages/home/Home";
 
 const App = () => {
   return (
     <>
       <Router>
-        <main className="w-full flex felx-col bg-neutral-50 min-h-screen">
-          
-          <Navbar/>
+        <Navbar />
 
-
-          <Routes>
-          <Route path="/" element={<Home/>}/>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About/>} />
         </Routes>
-
-
-
-        
-      </main>
       </Router>
-     
     </>
   );
 };
